@@ -56,7 +56,7 @@ class _ResumeListScreenState extends State<ResumeListScreen> {
                         builder: (context) =>
                             ResumeDetailScreen(resume: resume),
                       ),
-                    );
+                    );  
                   },
                 );
               },
