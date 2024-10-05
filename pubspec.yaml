@@ -32,12 +32,22 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter:
     sdk: flutter
-  url_launcher: ^6.3.0
+  flutter_share: ^2.0.0
+  share_plus: null
+  shared_preferences: 
+  url_launcher: ^6.0.20
+  
 
 dev_dependencies:
   flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo_dpr.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

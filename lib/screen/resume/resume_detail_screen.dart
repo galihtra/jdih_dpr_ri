@@ -12,8 +12,6 @@ class ResumeDetailScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFDF3),
       appBar: AppBar(
-        title:
-            const Text('Detail Resume', style: TextStyle(color: Colors.black)),
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -96,7 +94,7 @@ class ResumeDetailScreen extends StatelessWidget {
                 resume.judul,
                 style: const TextStyle(
                   fontSize:
-                      18, // Ukuran teks yang disamakan dengan teks lainnya
+                      18, 
                   fontWeight: FontWeight.normal,
                   color: Colors.black87,
                 ),
@@ -148,7 +146,7 @@ class ResumeDetailScreen extends StatelessWidget {
                   Center(
                     child: SizedBox(
                       width: double
-                          .infinity, // Membuat tombol melebar memenuhi lebar layar
+                          .infinity, 
                       child: ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFFFE791),
@@ -168,8 +166,9 @@ class ResumeDetailScreen extends StatelessWidget {
                         ),
                         onPressed: () async {
                           final url = resume.urlDownload;
-                          if (await canLaunch(url)) {
-                            await launch(url);
+                          if (await canLaunchUrl(Uri.parse(url))) {
+                            await launchUrl(Uri.parse(url),
+                                mode: LaunchMode.externalApplication);
                           } else {
                             throw 'Could not launch $url';
                           }
